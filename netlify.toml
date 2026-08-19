@@ -1,0 +1,187 @@
+[build]
+  publish = "."
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Cache-Control = "public, max-age=3600"
+
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Redirects para mantener URLs legacy de Wix
+[[redirects]]
+  from = "/productos-1"
+  to = "/productos/"
+  status = 301
+
+[[redirects]]
+  from = "/copia-de-sustratos"
+  to = "/servicios/chipeado/"
+  status = 301
+
+[[redirects]]
+  from = "/copia-de-piedras"
+  to = "/productos/madera/"
+  status = 301
+
+[[redirects]]
+  from = "/copia-de-piedras-1"
+  to = "/productos/suelos-sustratos/"
+  status = 301
+
+[[redirects]]
+  from = "/copia-de-madera"
+  to = "/productos/cesped/"
+  status = 301
+
+[[redirects]]
+  from = "/projects-8"
+  to = "/galeria/"
+  status = 301
+
+# Alias de URLs planas a estructura nueva
+[[redirects]]
+  from = "/tierra-negra"
+  to = "/productos/suelos-sustratos/tierra-negra/"
+  status = 301
+
+[[redirects]]
+  from = "/compost-organico"
+  to = "/productos/suelos-sustratos/compost-organico/"
+  status = 301
+
+[[redirects]]
+  from = "/corteza"
+  to = "/productos/suelos-sustratos/corteza/"
+  status = 301
+
+[[redirects]]
+  from = "/mezcla-tnco"
+  to = "/productos/suelos-sustratos/mezcla-tnco/"
+  status = 301
+
+[[redirects]]
+  from = "/mezcla-tnar"
+  to = "/productos/suelos-sustratos/mezcla-tnar/"
+  status = 301
+
+[[redirects]]
+  from = "/arena"
+  to = "/productos/suelos-sustratos/arena/"
+  status = 301
+
+[[redirects]]
+  from = "/tosca"
+  to = "/productos/suelos-sustratos/tosca/"
+  status = 301
+
+[[redirects]]
+  from = "/sustrato-hs"
+  to = "/servicios/sustratos/sustrato-hs/"
+  status = 301
+
+[[redirects]]
+  from = "/piedra-dolomita"
+  to = "/productos/piedras/piedra-dolomita/"
+  status = 301
+
+[[redirects]]
+  from = "/piedra-mar-del-plata"
+  to = "/productos/piedras/piedra-mar-del-plata/"
+  status = 301
+
+[[redirects]]
+  from = "/piedra-pometina"
+  to = "/productos/piedras/piedra-pometina/"
+  status = 301
+
+[[redirects]]
+  from = "/quebracho-colorado"
+  to = "/productos/madera/quebracho-colorado/"
+  status = 301
+
+[[redirects]]
+  from = "/grama-bahiana"
+  to = "/productos/cesped/grama-bahiana/"
+  status = 301
+
+[[redirects]]
+  from = "/lobo"
+  to = "/productos/cesped/lobo/"
+  status = 301
+
+[[redirects]]
+  from = "/celebration"
+  to = "/productos/cesped/celebration/"
+  status = 301
+
+[[redirects]]
+  from = "/tifway"
+  to = "/productos/cesped/tifway/"
+  status = 301
+
+[[redirects]]
+  from = "/kikuyo"
+  to = "/productos/cesped/kikuyo/"
+  status = 301
+
+[[redirects]]
+  from = "/bermuda"
+  to = "/productos/cesped/bermuda/"
+  status = 301
+
+[[redirects]]
+  from = "/suelos-sustratos"
+  to = "/productos/suelos-sustratos/"
+  status = 301
+
+[[redirects]]
+  from = "/sustratos"
+  to = "/servicios/sustratos/"
+  status = 301
+
+[[redirects]]
+  from = "/piedras"
+  to = "/productos/piedras/"
+  status = 301
+
+[[redirects]]
+  from = "/chipeado"
+  to = "/servicios/chipeado/"
+  status = 301
+
+[[redirects]]
+  from = "/madera"
+  to = "/productos/madera/"
+  status = 301
+
+[[redirects]]
+  from = "/cesped"
+  to = "/productos/cesped/"
+  status = 301
+
+[[redirects]]
+  from = "/galeria"
+  to = "/galeria/"
+  status = 301
+
+[[redirects]]
+  from = "/contacto"
+  to = "/contacto/"
+  status = 301
+
+[[redirects]]
+  from = "/servicios"
+  to = "/servicios/"
+  status = 301
+
+[[redirects]]
+  from = "/productos"
+  to = "/productos/"
+  status = 301
