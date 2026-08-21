@@ -5,9 +5,9 @@
 :root {
   --color-espresso:   #241D18;
   --color-espresso-2: #1a1410;
-  --color-verde:      #50803B;
-  --color-verde-light:#6fa050;
-  --color-verde-pale: #eaf3de;
+  --color-verde:      #8FAD7A;
+  --color-verde-light:#9fbb8c;
+  --color-verde-pale: #eef4e8;
   --color-arena:      #f5f2ee;
   --color-borde:      #e0d8cf;
   --color-texto:      #241D18;
@@ -19,7 +19,7 @@
 
   --max-width: 1200px;
   --header-h:  80px;
-  --topbar-h:  36px;
+  --topbar-h:  44px;
 
   --radius-sm: 4px;
   --radius-md: 8px;
@@ -111,8 +111,7 @@ p  { color: var(--color-texto-suave); }
 }
 .btn--ghost:hover { border-color: var(--color-blanco); }
 .btn--wsp { background: #779C66; color: var(--color-blanco); }
-.btn--wsp:hover { background: #68895a; }
-.btn svg { width: 18px; height: 18px; flex-shrink: 0; }
+.btn--wsp:hover { background: #68895a; }.btn svg { width: 18px; height: 18px; flex-shrink: 0; }
 .btn--lg { padding: 14px 28px; font-size: 14px; }
 
 /* TOPBAR */
@@ -153,6 +152,8 @@ p  { color: var(--color-texto-suave); }
   justify-content: space-between;
   height: 100%;
   gap: 8px;
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
 /* LOGO */
