@@ -37,8 +37,7 @@ document.addEventListener('DOMContentLoaded', function () {
     let current = 0;
 
     function getVisible() {
-      if (window.innerWidth >= 1024) return 3;
-      if (window.innerWidth >= 640)  return 2;
+      if (window.innerWidth >= 768) return 2;
       return 1;
     }
 
