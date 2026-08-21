@@ -1,4 +1,4 @@
-/* TIPUANAS — main.js v3 */
+/* TIPUANAS — main.js v4 */
 document.addEventListener('DOMContentLoaded', function () {
 
   /* MOBILE MENU */
@@ -27,28 +27,29 @@ document.addEventListener('DOMContentLoaded', function () {
     if (href === '/' && path === '/') link.classList.add('active');
   });
 
-  /* REVIEWS SLIDER */
+  /* REVIEWS SLIDER — muestra 2 cards en desktop, 1 en mobile */
   const track = document.querySelector('.reviews__track');
   if (track) {
-    const cards  = track.querySelectorAll('.review-card');
-    const dots   = document.querySelectorAll('.reviews__dot');
+    const cards   = Array.from(track.querySelectorAll('.review-card'));
+    const dots    = Array.from(document.querySelectorAll('.reviews__dot'));
     const btnPrev = document.querySelector('.reviews__btn--prev');
     const btnNext = document.querySelector('.reviews__btn--next');
     let current = 0;
+    const GAP = 20;
 
-    function getVisible() {
-      if (window.innerWidth >= 768) return 2;
-      return 1;
-    }
+    function getVisible() { return window.innerWidth >= 768 ? 2 : 1; }
 
     function goTo(idx) {
-      const vis   = getVisible();
-      const max   = Math.max(0, cards.length - vis);
-      current     = Math.max(0, Math.min(idx, max));
-      const card  = cards[0];
-      const gap   = 20;
-      const w     = card.offsetWidth + gap;
-      track.style.transform = `translateX(-${current * w}px)`;
+      const vis     = getVisible();
+      const max     = Math.max(0, cards.length - vis);
+      current       = Math.max(0, Math.min(idx, max));
+      const sliderW = track.parentElement.offsetWidth;
+      const cardW   = (sliderW - GAP * (vis - 1)) / vis;
+      cards.forEach(c => {
+        c.style.minWidth = cardW + 'px';
+        c.style.maxWidth = cardW + 'px';
+      });
+      track.style.transform = `translateX(-${current * (cardW + GAP)}px)`;
       dots.forEach((d, i) => d.classList.toggle('active', i === current));
     }
 
@@ -56,12 +57,12 @@ document.addEventListener('DOMContentLoaded', function () {
     if (btnNext) btnNext.addEventListener('click', () => goTo(current + 1));
     dots.forEach((d, i) => d.addEventListener('click', () => goTo(i)));
     window.addEventListener('resize', () => goTo(current));
-    goTo(0);
+    setTimeout(() => goTo(0), 60);
   }
 
   /* GALLERY LIGHTBOX */
-  const galleryItems = document.querySelectorAll('.gallery-masonry__item img, .gallery-lightbox-trigger');
-  if (galleryItems.length) {
+  const galleryImgs = document.querySelectorAll('.gallery-masonry__item img');
+  if (galleryImgs.length) {
     const overlay = document.createElement('div');
     overlay.style.cssText = 'position:fixed;inset:0;background:rgba(0,0,0,0.92);z-index:9999;display:none;align-items:center;justify-content:center;';
     const img = document.createElement('img');
@@ -72,17 +73,13 @@ document.addEventListener('DOMContentLoaded', function () {
     overlay.appendChild(img);
     overlay.appendChild(close);
     document.body.appendChild(overlay);
-
-    galleryItems.forEach(function(el) {
+    galleryImgs.forEach(el => {
       el.style.cursor = 'zoom-in';
-      el.addEventListener('click', function() {
-        img.src = el.src || el.dataset.src;
-        overlay.style.display = 'flex';
-      });
+      el.addEventListener('click', () => { img.src = el.src; overlay.style.display = 'flex'; });
     });
     close.addEventListener('click', () => { overlay.style.display = 'none'; });
-    overlay.addEventListener('click', (e) => { if (e.target === overlay) overlay.style.display = 'none'; });
-    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') overlay.style.display = 'none'; });
+    overlay.addEventListener('click', e => { if (e.target === overlay) overlay.style.display = 'none'; });
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') overlay.style.display = 'none'; });
   }
 
 });

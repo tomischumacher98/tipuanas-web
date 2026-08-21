@@ -26,10 +26,11 @@
 }
 .hero__title {
   color: var(--color-blanco);
-  font-size: clamp(2.2rem, 5vw, 3.8rem);
+  font-size: clamp(1.8rem, 3.5vw, 2.8rem);
   line-height: 1.1; margin-bottom: 32px;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
+  white-space: nowrap;
 }
 .hero__actions { display: flex; gap: 12px; justify-content: center; }
 .btn--lg { padding: 13px 28px; font-size: 13px; }
@@ -47,15 +48,10 @@
 }
 .btn--hero-outline:hover { background: var(--color-blanco); color: var(--color-espresso); }
 
-/* POR QUÉ ELEGIRNOS — con encuadre redondeado */
-.why { padding: 64px 0; background: var(--color-arena); }
+/* POR QUÉ ELEGIRNOS — fondo beige completo, sin tarjeta */
+.why { padding: 72px 0; background: var(--color-arena); }
 .why__inner {
   max-width: 820px; margin: 0 auto; text-align: center;
-  background: var(--color-blanco);
-  border-radius: 20px;
-  padding: 56px 48px;
-  box-shadow: var(--shadow-sm);
-  border: 1px solid var(--color-borde);
 }
 .why__eyebrow {
   display: block;
@@ -66,14 +62,14 @@
 }
 .why__years {
   font-family: var(--font-display);
-  font-size: clamp(3rem, 8vw, 5.5rem);
+  font-size: clamp(2rem, 5vw, 3.5rem);
   font-weight: 700;
   color: var(--color-verde);
   line-height: 1; margin-bottom: 0;
 }
 .why__years-sub {
   font-family: var(--font-display);
-  font-size: clamp(0.9rem, 2vw, 1.2rem);
+  font-size: clamp(0.75rem, 1.5vw, 1rem);
   font-weight: 700;
   color: var(--color-verde);
   text-transform: uppercase;
