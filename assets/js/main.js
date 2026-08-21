@@ -1,6 +1,15 @@
 /* TIPUANAS — main.js v4 */
 document.addEventListener('DOMContentLoaded', function () {
 
+  /* PARALLAX HERO */
+  const heroBg = document.querySelector('.hero__bg img');
+  if (heroBg) {
+    window.addEventListener('scroll', function () {
+      const scrolled = window.scrollY;
+      heroBg.style.transform = `translateY(${scrolled * 0.35}px)`;
+    }, { passive: true });
+  }
+
   /* MOBILE MENU */
   const toggle = document.querySelector('.nav-toggle');
   const nav    = document.querySelector('.nav');
