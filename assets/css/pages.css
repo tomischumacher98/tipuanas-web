@@ -3,9 +3,9 @@
 /* PAGE HERO con foto de fondo estática */
 .page-hero {
   position: relative;
-  height: 380px;
+  height: 220px;
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   overflow: hidden;
 }
 .page-hero__bg {
@@ -21,7 +21,8 @@
 }
 .page-hero .container {
   position: relative; z-index: 2;
-  padding-bottom: 44px;
+  padding-top: 0;
+  padding-bottom: 0;
 }
 .page-hero .breadcrumb { padding: 0 0 12px; }
 .page-hero .breadcrumb a,
