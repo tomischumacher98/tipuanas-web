@@ -3,7 +3,7 @@
 /* PAGE HERO con foto de fondo estática */
 .page-hero {
   position: relative;
-  height: 180px;
+  height: 160px;
   display: flex;
   align-items: center;
   overflow: hidden;
@@ -13,7 +13,9 @@
 }
 .page-hero__bg img {
   width: 100%; height: 100%;
-  object-fit: cover; object-position: center;
+  object-fit: cover;
+  object-position: center center;
+  transform: none !important;
 }
 .page-hero__overlay {
   position: absolute; inset: 0;
@@ -449,3 +451,6 @@
 @media (max-width: 480px) {
   .gallery-grid { grid-template-columns: 1fr; }
 }
+
+/* Banners interiores: sin parallax */
+.page-hero .parallax-img { transform: none !important; height: 100% !important; }
