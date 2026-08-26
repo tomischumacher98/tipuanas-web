@@ -320,3 +320,36 @@
 @media (max-width: 480px) {
   .svc-otros__grid { grid-template-columns: 1fr; }
 }
+
+/* ============================================
+   PARALLAX EN TODAS LAS FOTOS DE FONDO
+   ============================================ */
+.parallax-hero { overflow: hidden; }
+.parallax-img {
+  will-change: transform;
+  height: 110% !important;
+  object-fit: cover;
+}
+
+/* CAMBIO 5: menos margen arriba del page-hero */
+.page-hero {
+  height: 280px;
+  padding-top: 0;
+}
+.page-hero .container { padding-bottom: 36px; }
+
+/* CAMBIO 7: mapa mismo alto que bloque de info */
+.contact-info-map__grid { align-items: stretch; }
+.contact-map-block {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  min-height: 320px;
+}
+.contact-map-block iframe {
+  width: 100%;
+  height: 100%;
+  min-height: 320px;
+  border: none;
+  display: block;
+}
