@@ -256,7 +256,7 @@
   .review-card { min-width: calc(50% - 10px); }
 }
 @media (max-width: 768px) {
-  .hero { min-height: 75vh; }
+  .hero { min-height: 82vh; }
   .hero .container { padding-top: 48px; padding-bottom: 48px; }
   .why__inner { padding: 36px 24px; }
   .cat-grid { grid-template-columns: 1fr 1fr; gap: 12px; }
