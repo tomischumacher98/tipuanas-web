@@ -3,7 +3,7 @@
 /* PAGE HERO */
 .page-hero {
   position: relative;
-  height: 133px;
+  height: 160px;
   display: flex;
   align-items: center;
   overflow: hidden;
@@ -251,7 +251,7 @@
   .products-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
   .product-card__img { height: 160px; }
   .related-grid { grid-template-columns: repeat(2, 1fr); }
-  .page-hero { height: 140px; }
+  .page-hero { height: 120px; }
 }
 @media (max-width: 480px) {
   .products-grid { grid-template-columns: 1fr; }

@@ -89,7 +89,7 @@
   margin-bottom: 32px;
 }
 .why__desc {
-  font-size: 14px; color: var(--color-texto-suave);
+  font-size: 16px; color: var(--color-texto-suave);
   line-height: 1.8; max-width: 620px; margin: 0 auto 10px;
 }
 .why__cta { margin-top: 36px; margin-bottom: 48px; }
@@ -187,7 +187,7 @@
 }
 .review-card__stars { color: #FFD700; font-size: 16px; letter-spacing: 2px; }
 .review-card__text {
-  font-size: 13px; line-height: 1.7;
+  font-size: 15px; line-height: 1.7;
   color: var(--color-texto-suave);
   flex: 1;
 }
