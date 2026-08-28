@@ -294,13 +294,9 @@
    SERVICIOS MOBILE — cards una arriba de la otra
    ============================================ */
 @media (max-width: 768px) {
-  /* Hub servicios: 1 col en mobile */
+  /* Todos los hubs: 1 col en mobile */
   .products-hub .products-grid {
     grid-template-columns: 1fr !important;
-  }
-  /* Solo productos vuelven a 2 cols en mobile */
-  .products-hub.productos-hub .products-grid {
-    grid-template-columns: repeat(2, 1fr) !important;
   }
 }
 
