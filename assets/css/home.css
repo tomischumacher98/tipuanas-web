@@ -351,3 +351,32 @@
   .hero { min-height: 92vh !important; }
   .hero__title { font-size: clamp(1.7rem, 7vw, 2.4rem) !important; }
 }
+
+/* ============================================
+   DESKTOP Y MOBILE — mismos tamaños estos títulos
+   ============================================ */
+.reviews__header h2,
+.steps-section h2,
+.steps h2 { font-size: clamp(1.4rem, 2.8vw, 1.9rem) !important; }
+
+/* ============================================
+   MOBILE HOME — fixes definitivos
+   ============================================ */
+@media (max-width: 600px) {
+  /* Hero más chico en mobile */
+  .hero { min-height: 78vh !important; }
+
+  /* CALIDAD EN TU JARDÍN más grande */
+  .hero__title { font-size: clamp(2rem, 8vw, 2.8rem) !important; letter-spacing: 1px; }
+
+  /* MATERIALES PARA CONSTRUCCIÓN más grande */
+  .hero__eyebrow,
+  .hero__pre { font-size: 14px !important; letter-spacing: 2px; }
+
+  /* Todo lo que necesitás — más grande */
+  .hero__sub { font-size: 16px !important; line-height: 1.5; }
+
+  /* "Lo que dicen" y "¿Cómo hacer" — igual que desktop */
+  .reviews__header h2 { font-size: clamp(1.4rem, 2.8vw, 1.9rem) !important; }
+  .steps h2 { font-size: clamp(1.4rem, 2.8vw, 1.9rem) !important; }
+}

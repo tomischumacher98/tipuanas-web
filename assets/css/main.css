@@ -526,3 +526,27 @@ p  { color: var(--color-texto-suave); }
   .header .header__logo img,
   .header__inner .header__logo img { height: 26px !important; width: auto !important; }
 }
+
+/* ============================================
+   FIXES MOBILE DEFINITIVOS
+   ============================================ */
+@media (max-width: 768px) {
+  /* Logo más chico */
+  .header .header__logo img,
+  header .header__logo img,
+  .header__logo img { height: 22px !important; width: auto !important; }
+
+  /* Menú sin divisores */
+  .nav .nav__item,
+  .nav .nav__link,
+  .nav .nav__dropdown a { border: none !important; box-shadow: none !important; }
+  .nav .nav__item + .nav__item { border-top: none !important; }
+
+  /* WA flotante — tamaño correcto, no gigante */
+  .wsp-float {
+    width: 48px !important; height: 48px !important;
+    bottom: 20px !important; right: 20px !important;
+    left: auto !important; top: auto !important;
+  }
+  .wsp-float svg { width: 24px !important; height: 24px !important; }
+}
