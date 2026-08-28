@@ -1,4 +1,4 @@
-<!-- Google Analytics 4 — Tipuanas -->
+// Google Analytics 4 — Tipuanas
 window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
