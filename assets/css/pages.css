@@ -241,7 +241,7 @@
   .chip-fotos__item { height: 260px; }
   .contact-info-map__grid { grid-template-columns: 1fr; gap: 40px; }
   .gallery-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
-  .products-grid { grid-template-columns: 1fr !important; gap: 20px; }
+  .products-grid { grid-template-columns: 1fr !important; gap: 20px !important; }
   .product-card__img { height: 220px; }
   .related-grid { grid-template-columns: repeat(2, 1fr); }
   .page-hero { height: 120px; }
@@ -266,7 +266,7 @@
   .product-info { order: 3; }
 }
 @media (max-width: 480px) {
-  .products-grid { grid-template-columns: 1fr; }
+  .products-grid { grid-template-columns: 1fr !important; gap: 20px !important; }
   .gallery-grid { grid-template-columns: 1fr; }
   .svc-otros__grid { grid-template-columns: 1fr; }
 }
