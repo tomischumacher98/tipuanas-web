@@ -48,3 +48,15 @@
   .nav { top: var(--header-h); max-height: calc(100vh - var(--header-h)); }
   .btn { padding: 10px 18px; font-size: 12px; }
 }
+
+/* MOBILE MENU — sin líneas divisoras */
+@media (max-width: 768px) {
+  .nav.is-open .nav__item,
+  .nav.is-open .nav__link,
+  .nav.is-open .nav__dropdown a {
+    border-bottom: none !important;
+    border-top: none !important;
+  }
+  .nav__item + .nav__item { border-top: none !important; }
+  .nav__dropdown a + a { border-top: none !important; }
+}

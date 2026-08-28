@@ -256,7 +256,7 @@
   .review-card { min-width: calc(50% - 10px); }
 }
 @media (max-width: 768px) {
-  .hero { min-height: 82vh; }
+  .hero { min-height: 88vh; }
   .hero .container { padding-top: 48px; padding-bottom: 48px; }
   .why__inner { padding: 36px 24px; }
   .cat-grid { grid-template-columns: 1fr 1fr; gap: 12px; }
@@ -301,4 +301,18 @@
   .mobile-br { display: block; }
   .reviews__header h2 { font-size: 1.4rem; }
   .reviews__header p { font-size: 13px; }
+}
+
+/* MOBILE HOME FIXES */
+@media (max-width: 600px) {
+  /* Hero sub-título en mobile */
+  .hero__sub { font-size: 14px; }
+
+  /* Reviews header mobile */
+  .reviews__header h2 { font-size: 1.3rem; line-height: 1.2; }
+  .reviews__header p  { font-size: 13px; }
+
+  /* "Todo lo que necesitas para tu proyecto" */
+  .cat-section__title,
+  .section-header h2 { font-size: 1.3rem; }
 }

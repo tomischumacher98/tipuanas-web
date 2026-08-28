@@ -445,3 +445,25 @@ p  { color: var(--color-texto-suave); }
   width: 15px !important;
   height: 15px !important;
 }
+
+/* MOBILE FIXES */
+@media (max-width: 768px) {
+  /* Logo más chico en mobile */
+  .header__logo img { height: 24px !important; }
+
+  /* Menú sin divisores */
+  .nav__item { border-bottom: none !important; }
+  .nav__link { border-bottom: none !important; }
+  .nav__dropdown a { border-bottom: none !important; }
+  .nav.is-open .nav__item { border: none !important; border-bottom: none !important; }
+  .nav.is-open .nav__link { border: none !important; }
+
+  /* WA flotante — no mostrar en mobile si hay otro WA visible */
+  .wsp-float { width: 46px; height: 46px; bottom: 16px; right: 16px; }
+  .wsp-float svg { width: 22px; height: 22px; }
+}
+
+/* "Todo lo que necesitas para tu proyecto" en mobile */
+@media (max-width: 600px) {
+  .hero-sub-mobile br { display: inline !important; }
+}
