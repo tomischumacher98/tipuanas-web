@@ -241,8 +241,8 @@
   .chip-fotos__item { height: 260px; }
   .contact-info-map__grid { grid-template-columns: 1fr; gap: 40px; }
   .gallery-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
-  .products-grid { grid-template-columns: 1fr; gap: 12px; }
-  .product-card__img { height: 200px; }
+  .products-grid { grid-template-columns: 1fr !important; gap: 16px; }
+  .product-card__img { height: 220px; }
   .related-grid { grid-template-columns: repeat(2, 1fr); }
   .page-hero { height: 120px; }
 
@@ -318,3 +318,8 @@
 
 /* servicios-mobile marker */
 /* servicios-mobile */
+
+/* Títulos de sección - tamaño coherente */
+.reviews__header h2 { font-size: clamp(1.3rem, 3vw, 2rem); }
+.steps-section h2 { font-size: clamp(1.3rem, 3vw, 2rem); }
+.related h2 { font-size: clamp(1.1rem, 2.5vw, 1.5rem); }

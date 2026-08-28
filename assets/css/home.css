@@ -335,3 +335,19 @@
   /* Productos hub mobile: 1 columna */
   .productos-hub .products-grid { grid-template-columns: 1fr !important; }
 }
+
+/* Ajustes tipografía secciones home */
+.reviews__header h2 { font-size: clamp(1.2rem, 2.5vw, 1.8rem); }
+.steps h2 { font-size: clamp(1.2rem, 2.5vw, 1.8rem); }
+
+/* Por qué elegirnos más grande */
+.why__years { font-size: clamp(2.8rem, 6vw, 4.5rem) !important; }
+.why__desc { font-size: 16px; }
+.diff-item__title { font-size: 13px; }
+.diff-item__desc { font-size: 13px; }
+
+/* Mobile hero más largo */
+@media (max-width: 600px) {
+  .hero { min-height: 92vh !important; }
+  .hero__title { font-size: clamp(1.7rem, 7vw, 2.4rem) !important; }
+}

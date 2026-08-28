@@ -520,3 +520,9 @@ p  { color: var(--color-texto-suave); }
   .diff-item__title { font-size: 13px; }
   .diff-item__desc { font-size: 13px; }
 }
+
+/* LOGO MOBILE — máxima especificidad para consistencia */
+@media (max-width: 768px) {
+  .header .header__logo img,
+  .header__inner .header__logo img { height: 26px !important; width: auto !important; }
+}
