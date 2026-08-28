@@ -294,3 +294,32 @@
 .header__logo img { height: 30px !important; width: auto !important; flex-shrink: 0; }
 .nav__item--wsp .btn { padding: 9px 16px !important; font-size: 11px !important; }
 .nav__item--wsp .btn svg { width: 15px !important; height: 15px !important; }
+
+/* ============================================
+   SERVICIOS MOBILE — cards una arriba de la otra
+   ============================================ */
+@media (max-width: 768px) {
+  /* Hub servicios: 1 col en mobile */
+  .products-hub .products-grid {
+    grid-template-columns: 1fr !important;
+  }
+  /* Solo productos vuelven a 2 cols en mobile */
+  .products-hub.productos-hub .products-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+/* ============================================
+   COHERENCIA TIPOGRÁFICA — mismos tamaños en todas las páginas
+   ============================================ */
+/* Títulos H2 de sección */
+.svc-intro__text h2,
+.svc-hs__text h2,
+.contact-info-block h2 { font-size: clamp(1.4rem, 3vw, 2rem); }
+
+/* Textos de párrafo en servicios */
+.svc-intro__text p,
+.svc-hs__text p { font-size: 16px; color: var(--color-texto-suave); line-height: 1.8; }
+
+/* servicios-mobile marker */
+/* servicios-mobile */
