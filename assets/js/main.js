@@ -83,7 +83,10 @@ document.addEventListener('DOMContentLoaded', function () {
     function goTo(idx) {
       const vis     = getVisible();
       const max     = Math.max(0, cards.length - vis);
-      current       = Math.max(0, Math.min(idx, max));
+      // Circular: vuelve al principio/final
+      if (idx < 0) idx = max;
+      if (idx > max) idx = 0;
+      current       = idx;
       const sliderW = track.parentElement.offsetWidth;
       const cardW   = (sliderW - GAP * (vis - 1)) / vis;
       cards.forEach(function(c) {
@@ -158,5 +161,22 @@ document.addEventListener('DOMContentLoaded', function () {
       if (e.key === 'ArrowRight') nextImg();
     });
   }
+
+  /* SCROLL TO TOP */
+  const scrollTopBtn = document.createElement('button');
+  scrollTopBtn.className = 'scroll-top';
+  scrollTopBtn.setAttribute('aria-label', 'Volver arriba');
+  scrollTopBtn.innerHTML = '&#8593;';
+  document.body.appendChild(scrollTopBtn);
+  window.addEventListener('scroll', function() {
+    if (window.scrollY > 400) {
+      scrollTopBtn.classList.add('visible');
+    } else {
+      scrollTopBtn.classList.remove('visible');
+    }
+  }, { passive: true });
+  scrollTopBtn.addEventListener('click', function() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
 
 });
