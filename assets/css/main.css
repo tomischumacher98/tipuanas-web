@@ -476,7 +476,7 @@ p  { color: var(--color-texto-suave); }
    LOGO MOBILE — igual en TODAS las páginas
    ============================================ */
 @media (max-width: 768px) {
-  .header__logo img { height: 26px !important; }
+  
 }
 
 /* ============================================
@@ -490,4 +490,33 @@ p  { color: var(--color-texto-suave); }
   .nav__dropdown a + a { border: none !important; border-bottom: none !important; border-top: none !important; }
   .wsp-float { width: 46px; height: 46px; bottom: 16px; right: 16px; }
   .wsp-float svg { width: 22px; height: 22px; }
+}
+
+/* ============================================
+   MOBILE — logo idéntico en todas las páginas
+   ============================================ */
+@media (max-width: 768px) {
+  .header__logo img { height: 26px !important; width: auto !important; }
+
+  /* Topbar más chico en mobile */
+  .topbar { font-size: 11px; }
+
+  /* Títulos hero más grandes en mobile */
+  .hero__title {
+    font-size: clamp(1.8rem, 7vw, 2.6rem) !important;
+    white-space: normal !important;
+    letter-spacing: 1px;
+  }
+  .hero__br { display: inline !important; }
+
+  /* Subtítulo hero más grande */
+  .hero__sub { font-size: 15px !important; }
+
+  /* Por qué elegirnos: títulos más grandes */
+  .why__eyebrow { font-size: 12px; }
+  .why__years { font-size: clamp(2.6rem, 10vw, 4rem) !important; }
+  .why__years-sub { font-size: 1rem !important; }
+  .why__desc { font-size: 15px !important; }
+  .diff-item__title { font-size: 13px; }
+  .diff-item__desc { font-size: 13px; }
 }

@@ -256,7 +256,7 @@
   .review-card { min-width: calc(50% - 10px); }
 }
 @media (max-width: 768px) {
-  .hero { min-height: 88vh; }
+  .hero { min-height: 92vh; }
   .hero .container { padding-top: 48px; padding-bottom: 48px; }
   .why__inner { padding: 36px 24px; }
   .cat-grid { grid-template-columns: 1fr 1fr; gap: 12px; }
@@ -315,4 +315,23 @@
   /* "Todo lo que necesitas para tu proyecto" */
   .cat-section__title,
   .section-header h2 { font-size: 1.3rem; }
+}
+
+/* ============================================
+   MOBILE HOME — fixes específicos
+   ============================================ */
+@media (max-width: 600px) {
+  /* "MATERIALES PARA CONSTRUCCION" más grande */
+  .hero__title { font-size: clamp(1.8rem, 7vw, 2.4rem) !important; }
+
+  /* "Todo lo que necesitas / para tu proyecto" — salto de línea */
+  .hero__sub { font-size: 15px; }
+
+  /* Por qué elegirnos más grande */
+  .why__inner { padding: 40px 20px; }
+}
+
+@media (max-width: 480px) {
+  /* Productos hub mobile: 1 columna */
+  .productos-hub .products-grid { grid-template-columns: 1fr !important; }
 }
