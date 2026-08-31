@@ -179,4 +179,24 @@ document.addEventListener('DOMContentLoaded', function () {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   });
 
+  /* CARRUSEL DE PRODUCTO */
+  document.querySelectorAll('.product-carousel').forEach(function(carousel) {
+    const track = carousel.querySelector('.product-carousel__track');
+    const slides = carousel.querySelectorAll('.product-carousel__slide');
+    const dots = carousel.querySelectorAll('.product-carousel__dot');
+    const btnPrev = carousel.querySelector('.product-carousel__btn--prev');
+    const btnNext = carousel.querySelector('.product-carousel__btn--next');
+    if (!track || slides.length < 2) return;
+    let current = 0;
+    function goTo(idx) {
+      current = (idx + slides.length) % slides.length;
+      track.style.transform = 'translateX(-' + (current * 100) + '%)';
+      dots.forEach(function(d, i) { d.classList.toggle('active', i === current); });
+    }
+    if (btnPrev) btnPrev.addEventListener('click', function() { goTo(current - 1); });
+    if (btnNext) btnNext.addEventListener('click', function() { goTo(current + 1); });
+    dots.forEach(function(d, i) { d.addEventListener('click', function() { goTo(i); }); });
+    goTo(0);
+  });
+
 });
