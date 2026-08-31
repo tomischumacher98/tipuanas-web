@@ -74,7 +74,7 @@
 }
 .why__years {
   font-family: var(--font-display);
-  font-size: clamp(1.8rem, 4vw, 3rem);
+  font-size: clamp(2.2rem, 5vw, 3.8rem);
   font-weight: 700;
   color: var(--color-verde);
   line-height: 1; margin-bottom: 0;
@@ -341,7 +341,7 @@
 .steps h2 { font-size: clamp(1.2rem, 2.5vw, 1.8rem); }
 
 /* Por qué elegirnos más grande */
-.why__years { font-size: clamp(2.8rem, 6vw, 4.5rem) !important; }
+.why__years { font-size: clamp(2.2rem, 5vw, 3.8rem) !important; }
 .why__desc { font-size: 16px; }
 .diff-item__title { font-size: 13px; }
 .diff-item__desc { font-size: 13px; }
@@ -379,4 +379,20 @@
   /* "Lo que dicen" y "¿Cómo hacer" — igual que desktop */
   .reviews__header h2 { font-size: clamp(1.4rem, 2.8vw, 1.9rem) !important; }
   .steps h2 { font-size: clamp(1.4rem, 2.8vw, 1.9rem) !important; }
+}
+
+/* Scroll-to-top alineado con WA flotante */
+
+/* ¿Por qué elegirnos? tamaños ajustados */
+.why__eyebrow { font-size: 12px !important; }
+.why__years { font-size: clamp(2rem, 4.5vw, 3.5rem) !important; }
+.why__years-sub { font-size: clamp(0.85rem, 1.8vw, 1.1rem) !important; }
+
+/* Scroll-to-top alineado y centrado con WA flotante */
+.scroll-top {
+  right: 20px !important;
+  bottom: 80px !important;
+  left: auto !important;
+  width: 48px !important;
+  height: 48px !important;
 }

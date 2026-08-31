@@ -587,3 +587,7 @@ p  { color: var(--color-texto-suave); }
 }
 .scroll-top.visible { opacity: 1; pointer-events: auto; }
 .scroll-top:hover { background: var(--color-arena); color: var(--color-verde); transform: translateY(-2px); }
+
+/* ¿Por qué elegirnos? título seccion más grande */
+.why h2,
+.why__inner > h2 { font-size: clamp(1.6rem, 3.5vw, 2.4rem) !important; }
