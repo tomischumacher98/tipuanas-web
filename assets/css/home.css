@@ -381,18 +381,10 @@
   .steps h2 { font-size: clamp(1.4rem, 2.8vw, 1.9rem) !important; }
 }
 
-/* Scroll-to-top alineado con WA flotante */
 
-/* ¿Por qué elegirnos? tamaños ajustados */
-.why__eyebrow { font-size: 12px !important; }
-.why__years { font-size: clamp(2rem, 4.5vw, 3.5rem) !important; }
-.why__years-sub { font-size: clamp(0.85rem, 1.8vw, 1.1rem) !important; }
 
-/* Scroll-to-top alineado y centrado con WA flotante */
-.scroll-top {
-  right: 20px !important;
-  bottom: 80px !important;
-  left: auto !important;
-  width: 48px !important;
-  height: 48px !important;
-}
+/* ¿Por qué elegirnos? — ajuste fino de tamaños */
+/* +30 AÑOS: mini más chico que el original (3.8rem → 3.4rem) */
+.why__years { font-size: clamp(2rem, 4vw, 3.4rem) !important; }
+/* "DE EXPERIENCIA": mini más grande que el original (1rem → 1.15rem) */
+.why__years-sub { font-size: clamp(0.85rem, 1.8vw, 1.15rem) !important; }
