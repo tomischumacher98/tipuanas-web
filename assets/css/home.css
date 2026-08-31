@@ -385,6 +385,6 @@
 
 /* ¿Por qué elegirnos? — ajuste fino de tamaños */
 /* +30 AÑOS: mini más chico que el original (3.8rem → 3.4rem) */
-.why__years { font-size: clamp(2rem, 4.5vw, 3.6rem) !important; }
+.why__years { font-size: clamp(2.8rem, 6vw, 5rem) !important; }
 /* "DE EXPERIENCIA": mini más grande que el original (1rem → 1.15rem) */
 .why__years-sub { font-size: clamp(0.85rem, 1.8vw, 1.15rem) !important; }
