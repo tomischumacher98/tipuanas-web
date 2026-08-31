@@ -570,7 +570,7 @@ p  { color: var(--color-texto-suave); }
 
 /* ¿Por qué elegirnos? título seccion más grande */
 .why h2,
-.why__inner > h2 { font-size: clamp(1.8rem, 4vw, 2.8rem) !important; }
+.why__inner > h2 { font-size: clamp(2.2rem, 5vw, 3.5rem) !important; }
 
 /* SCROLL-TO-TOP — alineado con WA flotante */
 .scroll-top {
