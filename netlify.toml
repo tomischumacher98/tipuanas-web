@@ -101,6 +101,13 @@
   to = "/servicios/sustratos/sustrato-hs/"
   status = 301
 
+# La pagina vive en /servicios/. Esta ruta estuvo en el sitemap, asi que
+# puede estar indexada en Google: la redirigimos en vez de dar 404.
+[[redirects]]
+  from = "/productos/suelos-sustratos/sustrato-hs"
+  to = "/servicios/sustratos/sustrato-hs/"
+  status = 301
+
 [[redirects]]
   from = "/piedra-dolomita"
   to = "/productos/piedras/piedra-dolomita/"
