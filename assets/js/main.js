@@ -188,25 +188,18 @@ document.addEventListener('DOMContentLoaded', function () {
     const btnNext = carousel.querySelector('.product-carousel__btn--next');
     if (!track || slides.length < 2) return;
     let current = 0;
-    let animating = false;
-    // Transicion por fundido en lugar de deslizamiento: al cambiar de foto
-    // nunca se llega a ver la foto vecina entrando por el costado.
+    // Las fotos estan superpuestas: se cambia cual es visible con un fundido,
+    // asi que nunca se llega a ver la foto de al lado entrando por el costado.
     function goTo(idx) {
-      const next = (idx + slides.length) % slides.length;
-      if (next === current || animating) return;
-      current = next;
-      animating = true;
+      current = (idx + slides.length) % slides.length;
+      slides.forEach(function(sl, i) {
+        sl.classList.toggle('is-active', i === current);
+        sl.classList.toggle('is-hidden', i !== current);
+      });
       dots.forEach(function(d, i) { d.classList.toggle('active', i === current); });
-      track.style.opacity = '0';
-      window.setTimeout(function() {
-        track.style.transition = 'none';
-        track.style.transform = 'translateX(-' + (current * 100) + '%)';
-        void track.offsetWidth;
-        track.style.transition = '';
-        track.style.opacity = '1';
-        window.setTimeout(function() { animating = false; }, 170);
-      }, 160);
     }
+    goTo(0);
+
     if (btnPrev) btnPrev.addEventListener('click', function() { goTo(current - 1); });
     if (btnNext) btnNext.addEventListener('click', function() { goTo(current + 1); });
     dots.forEach(function(d, i) { d.addEventListener('click', function() { goTo(i); }); });
