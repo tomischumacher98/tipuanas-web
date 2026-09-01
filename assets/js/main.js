@@ -189,9 +189,24 @@ document.addEventListener('DOMContentLoaded', function () {
     if (!track || slides.length < 2) return;
     let current = 0;
     function goTo(idx) {
-      current = (idx + slides.length) % slides.length;
-      track.style.transform = 'translateX(-' + (current * 100) + '%)';
+      const next = (idx + slides.length) % slides.length;
+      // Salto no adyacente (wrap-around o click en un punto lejano):
+      // deslizar mostraria las fotos intermedias, asi que cortamos con un fundido.
+      const jump = Math.abs(next - current) > 1;
+      current = next;
       dots.forEach(function(d, i) { d.classList.toggle('active', i === current); });
+      if (!jump) {
+        track.style.transform = 'translateX(-' + (current * 100) + '%)';
+        return;
+      }
+      track.style.opacity = '0';
+      window.setTimeout(function() {
+        track.style.transition = 'none';
+        track.style.transform = 'translateX(-' + (current * 100) + '%)';
+        void track.offsetWidth;
+        track.style.transition = '';
+        track.style.opacity = '1';
+      }, 150);
     }
     if (btnPrev) btnPrev.addEventListener('click', function() { goTo(current - 1); });
     if (btnNext) btnNext.addEventListener('click', function() { goTo(current + 1); });
