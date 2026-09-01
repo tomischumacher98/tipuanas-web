@@ -8,9 +8,9 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-N64KK33BQ8"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/assets/css/main.css">
-  <link rel="stylesheet" href="/assets/css/pages.css">
-  <link rel="stylesheet" href="/assets/css/responsive.css">
+  <link rel="stylesheet" href="/assets/css/main.css?v=2">
+  <link rel="stylesheet" href="/assets/css/pages.css?v=2">
+  <link rel="stylesheet" href="/assets/css/responsive.css?v=2">
   <!-- Meta Pixel -->
   <script>
   !function(f,b,e,v,n,t,s)
@@ -53,7 +53,11 @@
       <h1 class="product-title-top" style="margin-top:16px;margin-bottom:20px;">Arena Intermedia</h1>
       <div class="product-detail__grid" style="margin-top:0;">
         <div class="product-gallery">
-          <div class="product-gallery__main"><img src="https://static.wixstatic.com/media/fde851_80c1cc20997641258bf38f5dae50772d~mv2.jpg/v1/fill/w_900,h_600,al_c,q_80/fde851_80c1cc20997641258bf38f5dae50772d~mv2.jpg" alt="Arena Intermedia" loading="eager"></div>
+          <div class="product-carousel">
+          <div class="product-carousel__track"><div class="product-carousel__slide"><img src="https://static.wixstatic.com/media/fde851_80c1cc20997641258bf38f5dae50772d~mv2.jpg/v1/fill/w_900,h_600,al_c,q_80/fde851_80c1cc20997641258bf38f5dae50772d~mv2.jpg" alt="Arena Intermedia - foto 1" loading="eager"></div><div class="product-carousel__slide"><img src="/assets/img/productos/arena-2.jpg" alt="Arena Intermedia - foto 2" loading="lazy"></div><div class="product-carousel__slide"><img src="/assets/img/productos/arena-3.jpg" alt="Arena Intermedia - foto 3" loading="lazy"></div></div>
+          <button class="product-carousel__btn product-carousel__btn--prev" aria-label="Anterior">&#8592;</button><button class="product-carousel__btn product-carousel__btn--next" aria-label="Siguiente">&#8594;</button>
+          <div class="product-carousel__dots"><button class="product-carousel__dot  active" aria-label="Foto 1"></button><button class="product-carousel__dot" aria-label="Foto 2"></button><button class="product-carousel__dot" aria-label="Foto 3"></button></div>
+        </div>
         </div>
         <div class="product-info">
           <h1 class="product-info__name">Arena Intermedia</h1>
@@ -94,6 +98,6 @@
       </div>
     </div>
   </div></footer>
-  <script src="/assets/js/main.js" defer></script>
+  <script src="/assets/js/main.js?v=2" defer></script>
   <script src="/assets/js/analytics.js" defer></script>
 </body></html>
