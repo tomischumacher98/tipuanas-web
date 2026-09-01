@@ -188,17 +188,15 @@ document.addEventListener('DOMContentLoaded', function () {
     const btnNext = carousel.querySelector('.product-carousel__btn--next');
     if (!track || slides.length < 2) return;
     let current = 0;
+    let animating = false;
+    // Transicion por fundido en lugar de deslizamiento: al cambiar de foto
+    // nunca se llega a ver la foto vecina entrando por el costado.
     function goTo(idx) {
       const next = (idx + slides.length) % slides.length;
-      // Salto no adyacente (wrap-around o click en un punto lejano):
-      // deslizar mostraria las fotos intermedias, asi que cortamos con un fundido.
-      const jump = Math.abs(next - current) > 1;
+      if (next === current || animating) return;
       current = next;
+      animating = true;
       dots.forEach(function(d, i) { d.classList.toggle('active', i === current); });
-      if (!jump) {
-        track.style.transform = 'translateX(-' + (current * 100) + '%)';
-        return;
-      }
       track.style.opacity = '0';
       window.setTimeout(function() {
         track.style.transition = 'none';
@@ -206,7 +204,8 @@ document.addEventListener('DOMContentLoaded', function () {
         void track.offsetWidth;
         track.style.transition = '';
         track.style.opacity = '1';
-      }, 150);
+        window.setTimeout(function() { animating = false; }, 170);
+      }, 160);
     }
     if (btnPrev) btnPrev.addEventListener('click', function() { goTo(current - 1); });
     if (btnNext) btnNext.addEventListener('click', function() { goTo(current + 1); });

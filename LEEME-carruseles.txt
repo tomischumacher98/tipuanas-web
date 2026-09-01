@@ -1,0 +1,70 @@
+BLOQUES DE CARRUSEL LISTOS PARA PEGAR
+========================================
+
+Cada bloque reemplaza a la etiqueta <img> unica que hoy muestra la foto
+del producto en su index.html. La foto 1 es la que ya tiene la pagina:
+copia su URL actual y pegala donde dice URL_ACTUAL_DE_LA_FOTO_1.
+
+Las imagenes -2 y -3 ya estan incluidas en este ZIP dentro de
+assets/img/productos/, no hay que hacer nada mas con ellas.
+
+
+
+----------------------------------------
+ARENA  (3 fotos)
+----------------------------------------
+<div class="product-carousel">
+          <div class="product-carousel__track"><div class="product-carousel__slide"><img src="URL_ACTUAL_DE_LA_FOTO_1" alt="Arena - foto 1" loading="lazy"></div><div class="product-carousel__slide"><img src="/assets/img/productos/arena-2.jpg" alt="Arena - foto 2" loading="lazy"></div><div class="product-carousel__slide"><img src="/assets/img/productos/arena-3.jpg" alt="Arena - foto 3" loading="lazy"></div></div>
+          <button class="product-carousel__btn product-carousel__btn--prev" aria-label="Anterior">&#8592;</button><button class="product-carousel__btn product-carousel__btn--next" aria-label="Siguiente">&#8594;</button>
+          <div class="product-carousel__dots"><button class="product-carousel__dot  active" aria-label="Foto 1"></button><button class="product-carousel__dot" aria-label="Foto 2"></button><button class="product-carousel__dot" aria-label="Foto 3"></button></div>
+        </div>
+
+
+----------------------------------------
+TOSCA  (2 fotos)
+----------------------------------------
+<div class="product-carousel">
+          <div class="product-carousel__track"><div class="product-carousel__slide"><img src="URL_ACTUAL_DE_LA_FOTO_1" alt="Tosca - foto 1" loading="lazy"></div><div class="product-carousel__slide"><img src="/assets/img/productos/tosca-2.jpg" alt="Tosca - foto 2" loading="lazy"></div></div>
+          <button class="product-carousel__btn product-carousel__btn--prev" aria-label="Anterior">&#8592;</button><button class="product-carousel__btn product-carousel__btn--next" aria-label="Siguiente">&#8594;</button>
+          <div class="product-carousel__dots"><button class="product-carousel__dot  active" aria-label="Foto 1"></button><button class="product-carousel__dot" aria-label="Foto 2"></button></div>
+        </div>
+
+
+----------------------------------------
+POMETINA  (3 fotos)
+----------------------------------------
+<div class="product-carousel">
+          <div class="product-carousel__track"><div class="product-carousel__slide"><img src="URL_ACTUAL_DE_LA_FOTO_1" alt="Pometina - foto 1" loading="lazy"></div><div class="product-carousel__slide"><img src="/assets/img/productos/pometina-2.jpg" alt="Pometina - foto 2" loading="lazy"></div><div class="product-carousel__slide"><img src="/assets/img/productos/pometina-3.jpg" alt="Pometina - foto 3" loading="lazy"></div></div>
+          <button class="product-carousel__btn product-carousel__btn--prev" aria-label="Anterior">&#8592;</button><button class="product-carousel__btn product-carousel__btn--next" aria-label="Siguiente">&#8594;</button>
+          <div class="product-carousel__dots"><button class="product-carousel__dot  active" aria-label="Foto 1"></button><button class="product-carousel__dot" aria-label="Foto 2"></button><button class="product-carousel__dot" aria-label="Foto 3"></button></div>
+        </div>
+
+
+----------------------------------------
+DOLOMITA  (3 fotos)
+----------------------------------------
+<div class="product-carousel">
+          <div class="product-carousel__track"><div class="product-carousel__slide"><img src="URL_ACTUAL_DE_LA_FOTO_1" alt="Dolomita - foto 1" loading="lazy"></div><div class="product-carousel__slide"><img src="/assets/img/productos/dolomita-2.jpg" alt="Dolomita - foto 2" loading="lazy"></div><div class="product-carousel__slide"><img src="/assets/img/productos/dolomita-3.jpg" alt="Dolomita - foto 3" loading="lazy"></div></div>
+          <button class="product-carousel__btn product-carousel__btn--prev" aria-label="Anterior">&#8592;</button><button class="product-carousel__btn product-carousel__btn--next" aria-label="Siguiente">&#8594;</button>
+          <div class="product-carousel__dots"><button class="product-carousel__dot  active" aria-label="Foto 1"></button><button class="product-carousel__dot" aria-label="Foto 2"></button><button class="product-carousel__dot" aria-label="Foto 3"></button></div>
+        </div>
+
+
+----------------------------------------
+PIEDRA MAR DEL PLATA  (3 fotos)
+----------------------------------------
+<div class="product-carousel">
+          <div class="product-carousel__track"><div class="product-carousel__slide"><img src="URL_ACTUAL_DE_LA_FOTO_1" alt="Piedra Mar del Plata - foto 1" loading="lazy"></div><div class="product-carousel__slide"><img src="/assets/img/productos/mar-del-plata-2.jpg" alt="Piedra Mar del Plata - foto 2" loading="lazy"></div><div class="product-carousel__slide"><img src="/assets/img/productos/mar-del-plata-3.jpg" alt="Piedra Mar del Plata - foto 3" loading="lazy"></div></div>
+          <button class="product-carousel__btn product-carousel__btn--prev" aria-label="Anterior">&#8592;</button><button class="product-carousel__btn product-carousel__btn--next" aria-label="Siguiente">&#8594;</button>
+          <div class="product-carousel__dots"><button class="product-carousel__dot  active" aria-label="Foto 1"></button><button class="product-carousel__dot" aria-label="Foto 2"></button><button class="product-carousel__dot" aria-label="Foto 3"></button></div>
+        </div>
+
+
+----------------------------------------
+QUEBRACHO  (3 fotos)
+----------------------------------------
+<div class="product-carousel">
+          <div class="product-carousel__track"><div class="product-carousel__slide"><img src="URL_ACTUAL_DE_LA_FOTO_1" alt="Quebracho - foto 1" loading="lazy"></div><div class="product-carousel__slide"><img src="/assets/img/productos/quebracho-2.jpg" alt="Quebracho - foto 2" loading="lazy"></div><div class="product-carousel__slide"><img src="/assets/img/productos/quebracho-3.jpg" alt="Quebracho - foto 3" loading="lazy"></div></div>
+          <button class="product-carousel__btn product-carousel__btn--prev" aria-label="Anterior">&#8592;</button><button class="product-carousel__btn product-carousel__btn--next" aria-label="Siguiente">&#8594;</button>
+          <div class="product-carousel__dots"><button class="product-carousel__dot  active" aria-label="Foto 1"></button><button class="product-carousel__dot" aria-label="Foto 2"></button><button class="product-carousel__dot" aria-label="Foto 3"></button></div>
+        </div>
