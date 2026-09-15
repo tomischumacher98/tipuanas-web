@@ -60,3 +60,34 @@
   .nav__item + .nav__item { border-top: none !important; }
   .nav__dropdown a + a { border-top: none !important; }
 }
+
+/* ============================================
+   MOBILE v7 — ajustes de tamaño (solo movil)
+   ============================================ */
+@media (max-width: 768px) {
+  /* 1 - Por que elegirnos: mas grande y un poco mas arriba */
+  .why { padding-top: 48px !important; }
+  .why__inner { padding-top: 26px !important; }
+  .why .why__eyebrow { font-size: 14px !important; letter-spacing: 2.2px; margin-bottom: 12px !important; }
+
+  /* 2 - +30 ANOS / de experiencia: un poquito mas grandes */
+  .why .why__years { font-size: 2.45rem !important; }
+  .why .why__years-sub { font-size: 1.1rem !important; }
+
+  /* 3 - CALIDAD EN TU JARDIN: un poco mas grande */
+  .hero .hero__title { font-size: clamp(2.3rem, 9vw, 3rem) !important; }
+
+  /* 5 y 6 - Todo lo que necesitas para tu proyecto: textos un toque mas grandes */
+  .cat-section__title { font-size: 1.45rem !important; line-height: 1.25; }
+  .cat-section__header .badge { font-size: 11px !important; }
+  .cat-card__body h3 { font-size: 1rem !important; }
+  .cat-card__body p { font-size: 13px !important; line-height: 1.45; }
+  .cat-card__link { font-size: 12px !important; }
+}
+
+/* 4 - Logo del header 2px mas grande (todas las paginas) */
+@media (max-width: 768px) {
+  .header .header__logo img,
+  header .header__logo img,
+  .header__logo img { height: 28px !important; width: auto !important; }
+}
