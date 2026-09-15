@@ -71,7 +71,7 @@
   .why .why__eyebrow { font-size: 14px !important; letter-spacing: 2.2px; margin-bottom: 12px !important; }
 
   /* 2 - +30 ANOS / de experiencia: un poquito mas grandes */
-  .why .why__years { font-size: 2.45rem !important; }
+  .why .why__years { font-size: 3.4rem !important; }
   .why .why__years-sub { font-size: 1.1rem !important; }
 
   /* 3 - CALIDAD EN TU JARDIN: un poco mas grande */
@@ -90,4 +90,9 @@
   .header .header__logo img,
   header .header__logo img,
   .header__logo img { height: 28px !important; width: auto !important; }
+}
+
+/* v8 - salto de linea en el titulo de categorias (solo movil) */
+@media (max-width: 768px) {
+  .cat-section__title .mobile-br { display: block !important; }
 }
