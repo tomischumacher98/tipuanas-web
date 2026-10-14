@@ -345,3 +345,27 @@
 .product-carousel__dots { position: absolute; bottom: 10px; left: 50%; transform: translateX(-50%); display: flex; gap: 6px; }
 .product-carousel__dot { width: 7px; height: 7px; border-radius: 50%; background: rgba(255,255,255,0.5); cursor: pointer; transition: background 0.2s; border: none; }
 .product-carousel__dot.active { background: white; }
+
+/* ============================================
+   BADGE "NUEVO" en tarjetas de producto
+   La fecha de vencimiento va en data-nuevo-hasta (ver main.js)
+   ============================================ */
+.product-card--nuevo { overflow: visible; position: relative; }
+.product-card--nuevo .product-card__img { border-radius: var(--radius-md) var(--radius-md) 0 0; }
+.product-badge-nuevo {
+  position: absolute;
+  top: -9px; right: -7px;
+  z-index: 3;
+  background: var(--color-verde);
+  color: #fff;
+  font-family: var(--font-display);
+  font-size: 10px; font-weight: 700;
+  text-transform: uppercase; letter-spacing: 1.2px;
+  padding: 5px 13px;
+  border-radius: 100px;
+  box-shadow: 0 2px 10px rgba(36,29,24,0.20);
+  pointer-events: none;
+}
+@media (max-width: 480px) {
+  .product-badge-nuevo { top: -8px; right: -4px; font-size: 9px; padding: 4px 11px; letter-spacing: 1px; }
+}

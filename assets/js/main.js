@@ -207,3 +207,17 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
 });
+
+/* BADGE "NUEVO" — se saca solo cuando pasa la fecha de data-nuevo-hasta */
+document.addEventListener('DOMContentLoaded', function () {
+  document.querySelectorAll('.product-badge-nuevo[data-nuevo-hasta]').forEach(function (el) {
+    var hasta = new Date(el.getAttribute('data-nuevo-hasta') + 'T23:59:59');
+    if (isNaN(hasta.getTime())) return;
+    if (new Date() > hasta) {
+      var card = el.closest('.product-card');
+      if (card) card.classList.remove('product-card--nuevo');
+      el.remove();
+    }
+  });
+});
+
