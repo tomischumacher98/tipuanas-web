@@ -6,27 +6,28 @@
  */
 (function () {
   var CATALOGO = {
-    '/productos/suelos-sustratos/corteza/':        { id: 'x2ex8ahi70', nombre: 'Chips de Corteza' },
-    '/productos/suelos-sustratos/tierra-negra/':   { id: 'fm2wlrra69', nombre: 'Tierra Negra' },
-    '/productos/suelos-sustratos/compost-organico/': { id: '43tioml1ue', nombre: 'Compost Orgánico' },
-    '/productos/suelos-sustratos/mezcla-tnco/':    { id: 'tm9qtjz9zt', nombre: 'Mezcla 50% TN + 50% Compost' },
-    '/productos/suelos-sustratos/mezcla-tnar/':    { id: 'pxezdog885', nombre: 'Mezcla 50% TN + 50% Arena' },
+    '/productos/suelos-sustratos/corteza/':        { id: 'COR-001', nombre: 'Chips de Corteza' },
+    '/productos/suelos-sustratos/tierra-negra/':   { id: 'TNE-001', nombre: 'Tierra Negra' },
+    '/productos/suelos-sustratos/compost-organico/': { id: 'CMP-001', nombre: 'Compost Orgánico' },
+    '/productos/suelos-sustratos/mezcla-tnco/':    { id: 'MTC-001', nombre: 'Mezcla 50% Tierra Negra + 50% Compost' },
+    '/productos/suelos-sustratos/mezcla-tnar/':    { id: 'MTA-001', nombre: 'Mezcla 50% Tierra Negra + 50% Arena' },
     // El Sustrato Liviano HS vive bajo /servicios/, no bajo /productos/
-    '/servicios/sustratos/sustrato-hs/':          { id: '40kc263tme', nombre: 'Sustrato Liviano HS' },
-    '/productos/suelos-sustratos/arena-gruesa/':   { id: 'ARE-GRU',    nombre: 'Arena Gruesa' },
-    '/productos/suelos-sustratos/arena/':          { id: 'ofpi7aye5q', nombre: 'Arena Intermedia' },
-    '/productos/suelos-sustratos/tosca/':          { id: 'vc0rtv2xwj', nombre: 'Tosca' },
-    '/productos/piedras/piedra-pometina/':         { id: '23gvr63p3u', nombre: 'Piedra Pometina' },
-    '/productos/piedras/piedra-dolomita/':         { id: 'jdnx5ltvc2', nombre: 'Piedra Dolomita' },
-    '/productos/piedras/piedra-mar-del-plata/':    { id: 'cd0shk9rm7', nombre: 'Piedra Mar del Plata' },
-    '/productos/madera/quebracho-colorado/':       { id: 'jsge7lyru1', nombre: 'Quebracho Colorado' },
+    '/servicios/sustratos/sustrato-hs/':          { id: 'SHS-001', nombre: 'Sustrato Liviano HS' },
+    '/productos/suelos-sustratos/arena-gruesa/':   { id: 'AGR-001',    nombre: 'Arena Gruesa' },
+    '/productos/suelos-sustratos/arena/':          { id: 'AIN-001', nombre: 'Arena Intermedia' },
+    '/productos/suelos-sustratos/tosca/':          { id: 'TSC-001', nombre: 'Tosca' },
+    '/productos/piedras/piedra-pometina/':         { id: 'POM-001', nombre: 'Piedra Pometina' },
+    '/productos/piedras/piedra-dolomita/':         { id: 'DOL-001', nombre: 'Piedra Dolomita' },
+    '/productos/piedras/piedra-mar-del-plata/':    { id: 'MDP-001', nombre: 'Piedra Mar del Plata' },
+    '/productos/madera/quebracho-colorado/':       { id: 'QBR-001', nombre: 'Quebracho Colorado' },
     // Todas las variedades de cesped van al unico producto "Césped" del catalogo
-    '/productos/cesped/grama-bahiana/':            { id: 'CESPED', nombre: 'Césped' },
-    '/productos/cesped/lobo/':                     { id: 'CESPED', nombre: 'Césped' },
-    '/productos/cesped/celebration/':              { id: 'CESPED', nombre: 'Césped' },
-    '/productos/cesped/tifway/':                   { id: 'CESPED', nombre: 'Césped' },
-    '/productos/cesped/kikuyo/':                   { id: 'CESPED', nombre: 'Césped' },
-    '/productos/cesped/bermuda/':                  { id: 'CESPED', nombre: 'Césped' }
+    '/productos/cesped/':                          { id: 'CSP-001', nombre: 'Césped' },
+    '/productos/cesped/grama-bahiana/':            { id: 'CSP-001', nombre: 'Césped' },
+    '/productos/cesped/lobo/':                     { id: 'CSP-001', nombre: 'Césped' },
+    '/productos/cesped/celebration/':              { id: 'CSP-001', nombre: 'Césped' },
+    '/productos/cesped/tifway/':                   { id: 'CSP-001', nombre: 'Césped' },
+    '/productos/cesped/kikuyo/':                   { id: 'CSP-001', nombre: 'Césped' },
+    '/productos/cesped/bermuda/':                  { id: 'CSP-001', nombre: 'Césped' }
   };
 
   var path = window.location.pathname;
