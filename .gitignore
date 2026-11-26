@@ -1,0 +1,2 @@
+# carpeta que genera build.js, la arma Netlify en cada deploy
+dist/
