@@ -112,7 +112,7 @@
 /* DIFFS — tamaño normal, sin línea */
 .why__diffs {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 20px;
 }
 .diff-item { text-align: center; padding: 4px 8px; }
@@ -167,10 +167,10 @@
   border: 1px solid rgba(255,255,255,0.12);
   border-radius: 100px; padding: 5px 14px; margin-bottom: 14px;
 }
-.reviews__badge-stars { color: #FFD700; letter-spacing: 2px; font-size: 14px; }
-.reviews__badge-text { font-size: 11px; color: #b0a99f; font-weight: 600; }
+.reviews__badge-stars { color: var(--color-estrella); letter-spacing: 2px; font-size: 14px; }
+.reviews__badge-text { font-size: 11px; color: var(--color-texto-tenue); font-weight: 600; }
 .reviews__header h2 { color: var(--color-blanco); margin-bottom: 6px; }
-.reviews__header p { color: #b0a99f; font-size: 13px; }
+.reviews__header p { color: var(--color-texto-tenue); font-size: 13px; }
 
 .reviews__slider { overflow: hidden; }
 .reviews__track { display: flex; gap: 20px; transition: transform 0.4s ease; }
@@ -185,7 +185,7 @@
   flex-shrink: 0;
   box-shadow: 0 2px 8px rgba(0,0,0,0.15);
 }
-.review-card__stars { color: #FFD700; font-size: 16px; letter-spacing: 2px; }
+.review-card__stars { color: var(--color-estrella); font-size: 16px; letter-spacing: 2px; }
 .review-card__text {
   font-size: 15px; line-height: 1.7;
   color: var(--color-texto-suave);
@@ -231,7 +231,7 @@
 .reviews__cta a:hover { color: var(--color-blanco); }
 
 /* STEPS — fondo sage */
-.steps-section { padding: 64px 0; background: #8FAD7A; }
+.steps-section { padding: 64px 0; background: var(--color-verde); }
 .steps-section .text-center h2 { color: var(--color-blanco); margin-bottom: 0; }
 .steps { display: flex; align-items: flex-start; justify-content: center; max-width: 800px; margin: 36px auto 0; }
 .step { flex: 1; text-align: center; padding: 0 20px; }
@@ -251,7 +251,7 @@
 
 /* RESPONSIVE */
 @media (max-width: 1024px) {
-  .why__diffs { grid-template-columns: repeat(2, 1fr); }
+  .why__diffs { grid-template-columns: repeat(3, 1fr); }
   .cat-grid { grid-template-columns: repeat(2, 1fr); }
   .review-card { min-width: calc(50% - 10px); }
 }
@@ -268,7 +268,7 @@
 @media (max-width: 480px) {
   .hero { min-height: 60vh; }
   .hero__title { font-size: 2rem; }
-  .why__diffs { grid-template-columns: 1fr 1fr; }
+  .why__diffs { grid-template-columns: 1fr; }
   .cat-grid { grid-template-columns: 1fr; }
   .review-card { min-width: 100%; }
 }

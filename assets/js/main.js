@@ -72,13 +72,30 @@ document.addEventListener('DOMContentLoaded', function () {
   const track = document.querySelector('.reviews__track');
   if (track) {
     const cards   = Array.from(track.querySelectorAll('.review-card'));
-    const dots    = Array.from(document.querySelectorAll('.reviews__dot'));
+    const dotsBox = document.querySelector('.reviews__dots');
+    let   dots    = [];
     const btnPrev = document.querySelector('.reviews__btn--prev');
     const btnNext = document.querySelector('.reviews__btn--next');
     let current = 0;
     const GAP = 20;
 
     function getVisible() { return window.innerWidth >= 768 ? 2 : 1; }
+
+    // un punto por cada posicion real del slider, que cambia con el ancho
+    function renderDots() {
+      if (!dotsBox) return;
+      const total = Math.max(1, cards.length - getVisible() + 1);
+      if (dots.length === total) return;
+      dotsBox.innerHTML = '';
+      dots = [];
+      for (let i = 0; i < total; i++) {
+        const d = document.createElement('div');
+        d.className = 'reviews__dot';
+        d.addEventListener('click', function () { goTo(i); });
+        dotsBox.appendChild(d);
+        dots.push(d);
+      }
+    }
 
     function goTo(idx) {
       const vis     = getVisible();
@@ -87,6 +104,7 @@ document.addEventListener('DOMContentLoaded', function () {
       if (idx < 0) idx = max;
       if (idx > max) idx = 0;
       current       = idx;
+      renderDots();
       const sliderW = track.parentElement.offsetWidth;
       const cardW   = (sliderW - GAP * (vis - 1)) / vis;
       cards.forEach(function(c) {
@@ -99,7 +117,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
     if (btnPrev) btnPrev.addEventListener('click', function() { goTo(current - 1); });
     if (btnNext) btnNext.addEventListener('click', function() { goTo(current + 1); });
-    dots.forEach(function(d, i) { d.addEventListener('click', function() { goTo(i); }); });
     window.addEventListener('resize', function() { goTo(current); });
     setTimeout(function() { goTo(0); }, 60);
   }
